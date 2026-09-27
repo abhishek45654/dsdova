@@ -1,0 +1,14 @@
+.page-shell { min-height: 100svh; }
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px clamp(20px, 10vw, 144px);
+  background: var(--ink);
+  color: rgba(245, 239, 230, 0.44);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  .site-footer { gap: 14px; flex-direction: column; }
+}

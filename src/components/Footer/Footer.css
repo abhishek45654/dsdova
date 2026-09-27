@@ -1,0 +1,23 @@
+.footer { padding: 82px clamp(24px, 10vw, 144px) 24px; background: var(--ink); color: var(--cream); }
+.footer-main { display: grid; grid-template-columns: 1.2fr 0.7fr 1fr 1.5fr; gap: clamp(28px, 5vw, 90px); padding-bottom: 76px; }
+.footer-brand { display: flex; align-items: flex-start; flex-direction: column; }
+.footer-wordmark { color: var(--cream); font-family: var(--display); font-size: clamp(2.3rem, 4vw, 4.2rem); font-weight: 700; letter-spacing: -0.1em; text-decoration: none; }
+.footer-brand p { margin: 14px 0 34px; color: var(--coral); font-family: var(--script); font-size: 2rem; transform: rotate(-4deg); }
+.footer-edition { color: rgba(245, 239, 230, 0.45); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.footer-column { display: flex; align-items: flex-start; flex-direction: column; gap: 13px; }
+.footer-column h2 { margin: 0 0 13px; color: var(--coral); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+.footer-column > a { color: rgba(245, 239, 230, 0.78); font-size: 1rem; text-decoration: none; transition: color 180ms ease; }
+.footer-column > a:hover, .footer-bottom a:hover { color: var(--coral); }
+.footer-column > p { max-width: 250px; margin: -2px 0 12px; color: rgba(245, 239, 230, 0.62); font-size: 0.96rem; line-height: 1.55; }
+.footer-signup .notify-form { width: 100%; max-width: 360px; min-height: 52px; }
+.footer-signup .notify-form input { font-size: 0.82rem; }
+.footer-signup .notify-form button { font-size: 0.82rem; }
+.footer-column .social-links { align-items: flex-start; flex-direction: column; gap: 16px; }
+.footer-column .social-link { width: 100%; color: rgba(245, 239, 230, 0.82); }
+.footer-column .social-link:hover { color: var(--coral); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 20px; border-top: 1px solid rgba(245, 239, 230, 0.16); color: rgba(245, 239, 230, 0.42); font-size: 0.76rem; }
+.footer-bottom > div { display: flex; flex-wrap: wrap; gap: 20px; }
+.footer-bottom a { color: inherit; text-decoration: none; transition: color 180ms ease; }
+.back-top { display: inline-flex; align-items: center; gap: 6px; }
+@media (max-width: 960px) { .footer-main { grid-template-columns: 1fr 1fr; row-gap: 58px; } }
+@media (max-width: 560px) { .footer { padding: 62px 20px 22px; } .footer-main { grid-template-columns: 1fr; gap: 44px; padding-bottom: 56px; } .footer-bottom { align-items: flex-start; flex-direction: column; gap: 18px; font-size: 0.82rem; } }

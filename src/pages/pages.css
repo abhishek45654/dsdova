@@ -1,0 +1,49 @@
+.editorial-page { min-height: 50vh; background: var(--ink); color: var(--cream); animation: reveal 650ms both; }
+.text-link { display: inline-flex; gap: 8px; margin-top: 28px; color: var(--coral); font-size: .92rem; font-weight: 600; text-decoration: none; }
+.editorial-section { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(40px, 10vw, 160px); padding: clamp(64px, 9vw, 130px) clamp(24px, 10vw, 144px); border-top: 1px solid rgba(245, 239, 230, 0.16); }
+.editorial-section h2 { margin: 0; font-family: var(--display); font-size: clamp(2rem, 4vw, 4.6rem); font-weight: 500; letter-spacing: -0.08em; line-height: 0.92; }
+.editorial-section h2 em { color: var(--coral); font-family: var(--script); font-size: 1.25em; font-weight: 400; letter-spacing: 0; }
+.editorial-section p { max-width: 570px; margin: 0; color: rgba(245, 239, 230, 0.7); font-size: 1.06rem; line-height: 1.8; }
+.editorial-section p + p { margin-top: 22px; }
+.editorial-image { min-height: 440px; background-image: linear-gradient(145deg, rgba(228, 129, 93, 0.2), rgba(21, 20, 18, 0.3)), var(--editorial-image); background-position: center; background-size: cover; filter: saturate(0.75); }
+.dark-band { background: #0d0c0b; color: var(--cream); }
+.dark-band h2 { color: var(--cream); }
+.dark-band p { color: rgba(245, 239, 230, 0.7); }
+.collection-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 0 clamp(20px, 5vw, 72px) 120px; }
+.collection-card { position: relative; display: flex; align-items: flex-end; min-height: 420px; padding: 22px; overflow: hidden; color: var(--cream); background-position: center; background-size: cover; }
+.collection-card::before { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(21,20,18,.8), transparent 60%); content: ''; }
+.collection-card:nth-child(1) { background-image: linear-gradient(0deg, rgba(21,20,18,.8), transparent 60%), var(--collection-image); background-position: 78% center; }
+.collection-card:nth-child(2) { background-image: linear-gradient(145deg, #b96648, #292521); }
+.collection-card:nth-child(3) { background-image: linear-gradient(145deg, #d3a27f, #584437); }
+.collection-card:nth-child(4) { background-image: linear-gradient(145deg, #6c7770, #1d2725); }
+.collection-card-content { position: relative; z-index: 1; }
+.collection-card .number { color: var(--coral); font-size: .75rem; letter-spacing: .16em; }
+.collection-card h2 { margin: 12px 0 18px; font-family: var(--display); font-size: 1.45rem; letter-spacing: .02em; text-transform: uppercase; }
+.collection-card span:last-child { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; }
+.form-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(40px, 10vw, 160px); padding: 0 clamp(24px, 10vw, 144px) 130px; }
+.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 18px; }
+.contact-form label { display: flex; flex-direction: column; gap: 9px; color: rgba(245,239,230,.7); font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.contact-form label:nth-child(3), .contact-form label:nth-child(4), .contact-form button, .contact-success { grid-column: 1 / -1; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 14px 0; border: 0; border-bottom: 1px solid rgba(245,239,230,.35); border-radius: 0; outline: 0; background: transparent; color: var(--cream); font: inherit; font-size: 1rem; }
+.contact-form textarea { min-height: 130px; resize: vertical; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--coral); }
+.contact-form input:user-invalid, .contact-form textarea:user-invalid { border-color: #a54d3c; }
+.contact-form button { display: inline-flex; align-items: center; justify-content: center; justify-self: start; gap: 10px; padding: 15px 24px; border: 1px solid var(--cream); border-radius: 999px; background: var(--cream); color: var(--ink); cursor: pointer; font: inherit; font-size: .86rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.contact-form button:hover { background: var(--coral); border-color: var(--coral); }
+.contact-success { padding: 22px; border-left: 2px solid var(--coral); font-size: 1.1rem; line-height: 1.7; }
+.legal-copy { max-width: 760px; padding: 0 clamp(24px, 10vw, 144px) 130px; }
+.legal-copy h2 { margin: 52px 0 12px; font-family: var(--display); font-size: 1.6rem; letter-spacing: -.04em; }
+.legal-copy p, .legal-copy li { color: rgba(245,239,230,.7); font-size: 1rem; line-height: 1.8; }
+.faq-list { padding: 0 clamp(24px, 10vw, 144px) 130px; }
+.faq-item { border-top: 1px solid rgba(245,239,230,.25); }
+.faq-item:last-child { border-bottom: 1px solid rgba(245,239,230,.25); }
+.faq-question { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 24px 0; border: 0; background: transparent; color: var(--cream); cursor: pointer; font: inherit; font-size: clamp(1rem, 2vw, 1.35rem); text-align: left; }
+.faq-question svg { transition: transform 220ms ease; }
+.faq-item.open .faq-question svg { transform: rotate(45deg); }
+.faq-answer { max-width: 680px; padding: 0 50px 24px 0; color: rgba(245,239,230,.67); font-size: 1rem; line-height: 1.7; }
+@media (max-width: 800px) { .editorial-section, .form-section { grid-template-columns: 1fr; gap: 36px; } .editorial-image { min-height: 300px; } .collection-grid { grid-template-columns: repeat(2, 1fr); } .collection-card { min-height: 300px; } }
+@media (max-width: 760px) {
+	.editorial-image { background-image: linear-gradient(145deg, rgba(228, 129, 93, 0.2), rgba(21, 20, 18, 0.3)), var(--editorial-mobile-image); }
+	.collection-card:nth-child(1) { background-image: linear-gradient(0deg, rgba(21,20,18,.8), transparent 60%), var(--collection-mobile-image); }
+}
+@media (max-width: 500px) { .collection-grid { grid-template-columns: 1fr; padding-bottom: 70px; } .collection-card { min-height: 380px; } .contact-form { grid-template-columns: 1fr; } .contact-form label:nth-child(3), .contact-form label:nth-child(4), .contact-form button, .contact-success { grid-column: auto; } }
